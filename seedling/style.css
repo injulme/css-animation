@@ -1,0 +1,160 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1c1d22;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.wrap {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  border: 7px solid #464343;
+  border-radius: 100%;
+  background: linear-gradient(#866112, #d0a261);
+  transform: translate3d(0, 0, 0);
+}
+
+.wave-one {
+  width: 600px;
+  height: 600px;
+  position: absolute;
+  top: -65%;
+  left: -30%;
+  border-radius: 45%;
+  background: rgba(179, 123, 44, 0.8);
+  animation: move 6s infinite linear;
+}
+
+.wave-two {
+  width: 650px;
+  height: 650px;
+  position: absolute;
+  top: -90%;
+  left: -30%;
+  border-radius: 45%;
+  background: rgba(149, 96, 35, 0.8);
+  animation: move 8s infinite linear;
+}
+
+.wave-three {
+  width: 650px;
+  height: 650px;
+  position: absolute;
+  top: -100%;
+  left: -30%;
+  border-radius: 45%;
+  background: #96c1e6;
+  border: 6px solid rgba(64, 43, 26, 0.7);
+  animation: move 10s infinite linear;
+}
+
+.wave-four {
+  width: 650px;
+  height: 650px;
+  position: absolute;
+  top: -100%;
+  left: -30%;
+  border-radius: 46%;
+  background: linear-gradient(rgba(255, 231, 187, 0.1) 10%, transparent);
+  animation: move 10s infinite linear;
+}
+
+@keyframes move {
+  /* 100% {
+    transform: rotate(360deg);
+  } */
+}
+
+/* sun css & animation */
+.fa-sun {
+  position: absolute;
+  top: 16%;
+  left: 42%;
+  font-size: 60px;
+  color: rgba(225, 113, 65, 0.8);
+  animation: sun-rotation 12s infinite linear;
+}
+
+.blur {
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+}
+
+@keyframes sun-rotation {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* seed css & animation */
+
+.fa-seedling {
+  position: absolute;
+  font-size: 66px;
+  color: green;
+}
+
+.seed1 {
+  top: 190px;
+  right: 165px;
+  animation: seed-move1 2.7s infinite;
+}
+
+@keyframes seed-move1 {
+  0%,
+  100% {
+    bottom: 0px;
+  }
+  50% {
+    top: 180px;
+  }
+}
+
+/* cloud css & animation */
+.fa-cloud {
+  position: absolute;
+  font-size: 34px;
+}
+
+.blur {
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+}
+
+.cloud1 {
+  top: 60px;
+  left: 90px;
+  animation: cloud-move 20s infinite;
+}
+
+.cloud2 {
+  top: 80px;
+  left: 90px;
+  animation: cloud-move 28s infinite;
+}
+
+.cloud3 {
+  top: 90px;
+  left: 90px;
+  animation: cloud-move 32s infinite;
+}
+
+@keyframes cloud-move {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 500px;
+  }
+}
